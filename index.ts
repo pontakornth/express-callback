@@ -9,6 +9,11 @@ app.use("/callback", (req: Request, res: Response) => {
   res.json({ status: "ok" });
 });
 
+app.use("", (req: Request, res: Response) => {
+  console.log(req.body);
+  res.json({ status: "ok" });
+});
+
 app.listen(4888, () => {
   console.log("listening on port 4888");
 });
